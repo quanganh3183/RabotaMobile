@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ"/>
+
+    <item
+        android:id="@+id/navigation_overview"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Tổng quan"/>
+
+    <item
+        android:id="@+id/navigation_jobs"
+        android:icon="@drawable/ic_work"
+        android:title="DS công việc"/>
+
+    <item
+        android:id="@+id/navigation_candidates"
+        android:icon="@drawable/ic_people"
+        android:title="DS ứng viên"/>
+</menu>
