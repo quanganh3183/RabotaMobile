@@ -10,6 +10,10 @@ public class JobHr {
 
 
 
+
+
+
+
     @SerializedName("name")
     private String name;
 
