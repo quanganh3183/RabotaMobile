@@ -7,6 +7,9 @@ public class JobHr {
     @SerializedName("_id")
     private String id;
 
+
+
+
     @SerializedName("name")
     private String name;
 
