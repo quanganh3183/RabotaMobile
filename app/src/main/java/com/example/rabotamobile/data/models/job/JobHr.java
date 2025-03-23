@@ -1,7 +1,9 @@
 package com.example.rabotamb.data.models.job;
 
+import com.example.rabotamb.data.models.skill.Skill;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
+import java.util.ArrayList;
 
 public class JobHr {
     @SerializedName("_id")
@@ -11,13 +13,13 @@ public class JobHr {
     private String name;
 
     @SerializedName("skills")
-    private List<String> skills;
+    private List<Skill> skills;
 
     @SerializedName("location")
     private String location;
 
     @SerializedName("salary")
-    private int  salary;
+    private int salary;
 
     @SerializedName("quantity")
     private int quantity;
@@ -38,31 +40,32 @@ public class JobHr {
     private boolean isActive;
 
     @SerializedName("company")
-    private Company company;
+    private Company company;  // Thay đổi từ String thành Company object
 
-    // Nested Company class
+    // Inner class for Company
     public static class Company {
         @SerializedName("_id")
-        private String id;
+        private String _id;
 
         @SerializedName("name")
         private String name;
 
-        public Company(String id, String name) {
-            this.id = id;
-            this.name = name;
-        }
+        @SerializedName("logo")
+        private String logo;
 
-        public String getId() { return id; }
-        public void setId(String id) { this.id = id; }
+        public String get_id() { return _id; }
         public String getName() { return name; }
+        public String getLogo() { return logo; }
+
+        public void set_id(String id) { this._id = id; }
         public void setName(String name) { this.name = name; }
+        public void setLogo(String logo) { this.logo = logo; }
     }
 
-    // Existing getters
+    // Getters
     public String getId() { return id; }
     public String getName() { return name; }
-    public List<String> getSkills() { return skills; }
+    public List<Skill> getSkills() { return skills != null ? skills : new ArrayList<>(); }
     public String getLocation() { return location; }
     public int getSalary() { return salary; }
     public int getQuantity() { return quantity; }
@@ -73,10 +76,10 @@ public class JobHr {
     public boolean isActive() { return isActive; }
     public Company getCompany() { return company; }
 
-    // Existing setters
+    // Setters
     public void setId(String id) { this.id = id; }
     public void setName(String name) { this.name = name; }
-    public void setSkills(List<String> skills) { this.skills = skills; }
+    public void setSkills(List<Skill> skills) { this.skills = skills; }
     public void setLocation(String location) { this.location = location; }
     public void setSalary(int salary) { this.salary = salary; }
     public void setQuantity(int quantity) { this.quantity = quantity; }
