@@ -304,8 +304,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             newPasswordInput.setError("Vui lòng nhập mật khẩu mới");
             return false;
         }
-
-        // Kiểm tra và hiển thị chi tiết các yêu cầu mật khẩu chưa đạt
         String errorMessage = getPasswordErrorMessage(password);
         if (!errorMessage.isEmpty()) {
             newPasswordInput.setError(errorMessage);
