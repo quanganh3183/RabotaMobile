@@ -16,13 +16,13 @@ public class JobListResponse {
     }
 
     public static class Meta {
-        private Integer current;
-        private Integer pageSize;
+        private int current;
+        private int pageSize;
         private int pages;
         private int total;
 
-        public Integer getCurrent() { return current; }
-        public Integer getPageSize() { return pageSize; }
+        public int getCurrent() { return current; }
+        public int getPageSize() { return pageSize; }
         public int getPages() { return pages; }
         public int getTotal() { return total; }
     }
