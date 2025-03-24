@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">RabotaMobile</string>
+    <string name="app_name"></string>
+
+    <string name="status_pending">PENDING</string>
+    <string name="status_passcv">PASSCV</string>
+    <string name="status_approved">APPROVED</string>
+    <string name="status_rejected">REJECTED</string>
 </resources>
