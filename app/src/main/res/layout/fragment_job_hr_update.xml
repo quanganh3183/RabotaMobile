@@ -43,26 +43,18 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <MultiAutoCompleteTextView
+            android:id="@+id/editJobSkills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            app:hintEnabled="true">
-
-            <MultiAutoCompleteTextView
-                android:id="@+id/editJobSkills"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:maxLines="3"
-                android:hint="Chọn kỹ năng"
-                android:completionThreshold="1"
-                android:imeOptions="actionNext"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:hint="Chọn kỹ năng"
+            android:completionThreshold="1"
+            android:imeOptions="actionNext"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/labelJobLocation"
@@ -125,7 +117,7 @@
                 android:id="@+id/editJobSalary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:hint="Mức lương (VNĐ)"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -219,14 +211,7 @@
                 android:scrollbars="vertical"
                 android:gravity="top|start"
                 android:padding="12dp"
-                android:hint="Nhập mô tả chi tiết về công việc"
-                android:importantForAutofill="no"
-                android:textIsSelectable="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:longClickable="true"
-                android:textAlignment="textStart" />
-
+                android:hint="Nhập mô tả chi tiết về công việc"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar
@@ -240,7 +225,7 @@
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tạo mới"
+            android:text="Cập nhật"
             android:layout_marginTop="16dp"/>
 
     </LinearLayout>
