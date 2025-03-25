@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,17 +14,86 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RabotaMobile"
+        android:theme="@style/Theme.RabotaMB"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.OtpVerificationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:label="Thông tin cá nhân"/>
+
+        <activity
+            android:name=".ui.profile.ChangePasswordActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".ui.job.JobDetailsActivity"
+            android:exported="false"
+            android:label="Chi tiết công việc"
+            android:parentActivityName=".ui.main.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.main.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.company.CompanyDetailsActivity"
+            android:exported="false"
+            android:label="Chi tiết công ty"
+            android:parentActivityName=".ui.job.JobDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.job.JobDetailsActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.hr.HRManagementActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ui.profile.UpdateProfileActivity"
+            android:exported="false"
+            android:label="Cập nhật thông tin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".ui.hr.fragments.ResumeDetailActivity"
+            android:label="Chi tiết ứng viên" />
+
+        <activity
+            android:name=".ui.profile.ApplicationHistoryActivity"
+            android:label="Lịch sử ứng tuyển"/>
     </application>
 
 </manifest>

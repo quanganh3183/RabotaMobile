@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RabotaMobile"
+rootProject.name = "Rabota MB"
 include(":app")
  
